@@ -5,7 +5,10 @@ on:
       - "main"
 jobs:
   bh-python:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.ossystem }}
+    strategy:
+      matrix:
+        ossystem: [ubuntu-latest,windows-latest,macos-latest]
     steps:
       - name: checking python version on platform
         run: python -V
