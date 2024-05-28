@@ -12,4 +12,8 @@ jobs:
     steps:
       - name: checking python version on platform
         run: python -V
+      - name: fetching git repo code to runnerrs machine 
+        uses: actions/checkout@v4
+      - name: run python code into ${{ matrix.ossystem }}
+        run: python bh-pyt.py
         
