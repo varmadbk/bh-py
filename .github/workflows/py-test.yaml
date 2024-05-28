@@ -1,0 +1,12 @@
+name: CI workflow for python app
+on:
+  push:
+    branches:
+      - "main"
+jobs:
+  bh-python:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checking python version on platform
+        run: python -V
+        
